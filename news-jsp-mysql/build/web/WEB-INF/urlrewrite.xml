@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN" "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">
+<urlrewrite>   
+    <rule enabled="true">
+        <condition type="request-uri" operator="notequal">/(resources|admin|upload)</condition>
+        <from>/tin-tuc/([a-z0-9-]+).html</from>
+        <to type="passthrough">/single-page.jsp?url=$1</to>
+    </rule>    
+</urlrewrite> 
+
